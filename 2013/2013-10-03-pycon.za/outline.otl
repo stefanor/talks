@@ -1,0 +1,126 @@
+Debian
+	Headcount
+	Packages
+		Convenient installation
+			Free Software is written by disparate groups
+			Build systems
+			Dependencies
+		Coherent holistic product
+			FHS
+			Transition handling
+	Maintainers
+		(Debian specific)
+		Package Maintainers != DD / DM
+		Debian is Feudal
+			but meritocratic
+		Experts in a particular package
+		Teams
+	Release schedule
+		every ~2 years, 3 support
+Ubuntu
+	Relationship to Debian
+		Supported core
+		70% entirely unmodified Debian
+		Few new packages
+		Smaller team
+		Release schedule
+			LTS: 2 year cycle, 5 year support
+			6 month releases
+			Paid archive maintenance
+				Fast transitions
+				Often slightly ahead of Debian
+CPython in Debian
+	Interpreter
+		History
+			Once upon a time, we had one Python in the archive
+			Since python2 (2.0) transitions required 1 python
+			Around 2.3, python-defaults
+	Applications
+		Useful to package
+		Can be kept out of the import path
+	Libraries
+		for Applications
+		for Developers
+			crazy build systems
+			C extensions
+			convenience
+		Only one version
+	History
+		~2.3, python-central
+			handles common python problems, like byte compilation
+		~2.4, python-support
+			technical solution to a social problem
+			automatic re-byte-compilation
+			interesting upgrade failures
+		~2.5, py3k
+			mostly ignored
+		~3.2, dh_python2 & 3
+			PEP3147: __pycache__
+			PEP3149: ABI tagging
+			PEP384: stable ABI
+			Ubuntu's py3k push
+		~3.3, pybuild, PyPy
+			One "true" way
+The people
+	DPMT & PAPT
+		Everything in SVN
+			Git migration always on the agenda
+		Knowledgeable people and sponsors
+	Want to help?
+		http://deb.li/joindpmt
+		Fix bugs!
+		Review things
+		Build infrastructure
+	Upstream maintainers
+		Engage with your distro maintainers
+		Join their team
+		Subscribe to bugs
+		Stable APIs
+		Patience
+	Inactive Distro maintainers
+		Help
+		Take over
+		Request removal
+Modern Debian Python Packaging
+	Fundamentals
+		Source Package
+			Upstream source + Patches
+			RFC822-ish text files
+			Except
+				\texttt{debian/rules}: Make
+				\texttt{debian/changelog}
+		Build systems
+			source -> binary*
+			historical
+				explicit (complex)
+			dh
+				Smart, Declarative
+				Overrides
+	pybuild
+		setup.py
+		all 3 python stacks
+		nose, py.test, unittest
+		dh plugin
+		examples
+			unidecode
+			python-cffi
+	We're hiring
+		http://deb.li/joindpmt
+END
+
+
+
+This talk is aimed at people who maintain Python libraries and also users of
+Debian packaged libraries. (Wherever I say Debian in this abstract, it applies
+to Ubuntu too). The talk should explain a bit about how and why libraries are
+packaged in Debian, and how to help maintain (or contribute) packages you care
+about.
+
+We'll cover a bit of history of the Python stacks in Debian and how packaged
+modules are provided, and who does the work. For context, we'll take a quick
+detour into Debian packaging in general, and the Debian project's lifecycle.
+
+Debian recently gained a new Python packaging tool, pybuild. This finally
+makes it easy to package the same library for Python 2, 3, and even PyPy. So,
+we'll have a look at what it does, and some example packaging.
+
