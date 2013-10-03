@@ -1,1 +1,9 @@
-presentation.html
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.pdf.cache
+*.pdf.mk
+*.snm
+*.toc
