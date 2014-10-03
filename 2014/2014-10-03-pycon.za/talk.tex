@@ -1,0 +1,82 @@
+\documentclass[]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{ulem}\normalem
+\usepackage{hyperref}
+
+\newcommand{\SWIRLBGhi}{%
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{../../common/images/swirl-light}}}
+\newcommand{\SWIRLBGlo}{%
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{../../common/images/swirl-lightest}}}
+\newcommand{\TALKURL}{%
+  \url{https://github.com/stefanor/talks}}
+
+\title{Python in Debian:\\
+  Past, Present, Get involved!\\
+  Reprise (sorry)}
+\author{Stefano Rivera}
+\institute{Hats: Yola, Debian, Ubuntu}
+\date[Johannesburg, South Africa]{3 October 2014\\
+  Pycon ZA}
+
+\mode<presentation>
+{
+  \usetheme{Luebeck}
+  \usecolortheme{beaver}
+  \setbeamercovered{transparent}
+  \SWIRLBGlo
+}
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+{\SWIRLBGhi
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+
+\include{body}
+
+{\SWIRLBGhi
+\begin{frame}{}
+  \begin{center}
+    \vfill \vfill
+    {\LARGE Thanks!}
+    \vfill \vfill
+    {\huge Questions?}
+    \vfill
+    Stefano Rivera \\
+    \texttt{stefanor@debian.org} \\\vfill
+    {\small \url{http://tumbleweed.org.za/}}
+  \end{center}
+  \vfill \vfill
+  {\tiny
+    \begin{center}
+      \begin{tabular}{l@{\hspace{1em}}l}
+        \multicolumn{2}{l}{Slides:} \\
+        Available at
+        & \TALKURL
+        \\
+        Built using \LaTeX\ Beamer
+        & Layout cribbed from Stefano Zacchiroli
+        \\
+        Copyright \copyright
+        & 2013--2014, Stefano Rivera
+        \\
+        License
+        & \href{http://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0 ---
+          Creative Commons Attribution-ShareAlike 3.0}
+        \\
+      \end{tabular}
+    \end{center}}
+\end{frame}
+}
+\end{document}
