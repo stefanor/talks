@@ -1,0 +1,319 @@
+Production server architectures
+	What world do our apps live in?
+
+	Typical SASS app:
+		Redundant front-ends
+		Central DB
+
+	Microservices:
+		Redundant front-ends
+		Redundant services
+		Central DBs
+
+	Async:
+		Job queues
+		Workers
+		Central Queues
+
+	Client Load Balancing:
+		haproxy / nginx / hardware
+		Single IP / hostname for each service / DB
+
+	Internal Service Load Balancing:
+		the same, or
+		intelligent fancy clients
+		service discovery: zookeeper / something
+
+	Development environments:
+		Production-like environments (QA)
+		Developer's laptops (local dev, maybe one app only)
+		Integration environments (all on one box, no LBs)
+
+	Development workflows:
+		VCS (git / whatever)
+		Build system (?)
+		Deployment tool
+		...
+		Profit
+
+Configuration
+	What world do our apps live in?
+
+	Production:
+		Probably most complex environment
+		Service LBs
+		Background workers
+
+	QA:
+		Like production, but different
+		No redundancy?
+
+	Integration environments:
+		Everything on one machine
+		Name-based vhosting?
+		Save the RAM
+		Less workers, less background workers
+
+	Local dev:
+		Against prod / QA / int-env?
+		sqlite?
+		Simple bootstrapping
+		Dependencies...
+
+	Things apps need to know:
+		Where are services?
+		Where are DBs?
+		Secrets
+		Other parameters
+
+	Where should these live:
+		Centrally
+		In each app
+
+	Central sucks:
+		Adding a setting means commits to 2 repositories
+		What uses this setting over here?
+
+	In each app sucks:
+		This setting is the same for every app in production
+		I want to put this app in a public github repo
+
+	Compromise:
+		Both
+		Which means probably no configuration management system involvement
+		per-machine settings
+
+	yoconfigurator smush
+		C: hostname
+		C: common
+		C: common-ENV
+		C: common-ENV-CLUSTER
+		C: common-overrides
+		A: APP-default
+		A: APP-ENV (and cluster)
+		C: APP
+		C: APP-ENV (and cluster)
+		C: APP-overrides
+
+	Exposing config to apps:
+		settings.py - lots of if ladders
+		settings.py.ENVIRONMENT - lots of duplication, no shared config
+		environment variables - local dev hurts, forks hurt
+		config files - actually pretty good
+		other things
+
+	Tooling:
+		Config file generator
+		Generate against any environment
+
+
+Deployment tools
+	Get the code out
+
+	simple git pull
+		Actually fairly good, these days
+		What about dependencies?
+		Configuration?
+
+	git pull + script:
+		What happens while this is running?
+		What happens if it fails?
+
+	Typical script:
+		install OS packages
+		manage virtualenv
+		build non-python stuff
+		build config
+		migrate DBs (here be dragons)
+		bounce workers
+
+	Unexpected problems:
+		PyPI is down
+		PyPI changes
+		Non-deterministic thing is built
+		(esp, minification & filenames)
+
+	Reproducibility:
+		Goal: Same generated artifacts on each production server
+
+	Build system:
+		Build virtulenvs
+		Build non-python
+		Build config (?)
+		Bundle
+
+	Other benefits:
+		Roll-backs
+		Centralized build-effort
+		Build-time test suites
+
+	Downsides:
+		Platform dependencies
+		ABI
+		test suite length
+		Build scripts
+
+	Output:
+		git repo
+		distro package
+		VM
+		other: tarball in some kind of archive
+
+	Deployment:
+		extract latest build
+		generate config?
+		run script
+
+	Next goal:
+		factor out scripts
+		build scripts
+		deploy scripts
+
+	How to execute:
+		ssh do stuff?
+		configuration management system?
+		deploy system on box:
+			ssh run command
+			http request
+
+	Deployment automation:
+		commit hook triggers build system
+		build triggers tests
+		build triggers deploy (?)
+		deploy triggers validation tests?
+		deploy triggers chat notification
+
+	Releases:
+		git branches?
+		promoted builds?
+
+
+Configuration management
+	Where does it fit in
+
+	Does deploys:
+		Simple
+		Slow (it does everything else, too)
+
+	Basic config:
+		Standard OS packages and config
+
+	Per app:
+		external dependencies (rarely change)
+		service discovery
+		initial deploy (bootstrapping)
+		vhosts (?)
+
+	Other stuff:
+		3rd party apps that aren't deployed
+		DBs
+		Caches
+		Brokers
+
+	Demo envhub
+
+
+Commit to production latency
+	Continuous deployment means we're going to break things. We need to be able to fix them, quickly
+
+	Obvious optimizations:
+		SSDs
+		Cache / mirror PyPI (and npm)
+		Cache eggs / wheels
+		Cache virtualenvs (and node_modules)
+		pre-minify images in git / cache minification
+		Get slow tests out of critical path
+		Don't build VMs
+
+yodeploy
+	Our deployment tool.
+
+	Build time:
+		Still shell scripts
+		(But fairly short boilerplate)
+		More and more gulp / grunt
+		Spit out tarball, run spade upload
+
+	Deploy Workflow:
+		receive deploy command
+		extract tarball to /srv/APP/versions/VERSION/
+		prepare hook
+			generate things that can't be done at build time
+		swing /srv/APP/live symlink
+		deployed hook
+			bounce things
+
+	Hooks:
+		Knows about yoconfigurator
+		Contains simple templating engine
+		Knows about virtualenvs
+		Must still be taught about npm
+			But, actually, we keep npm to build-time
+		Knows how to drive a Django app
+		Knows how to drive upstart
+		Knows how to drive tomcat
+		Customizable in Python
+
+zero downtime
+	What happens during the deploy
+
+	ideal:
+		web server finishes old requests using old code
+		uses new code for new requests
+
+	erlang:
+		Well, duh
+		(But we don't actually deploy any with yodeploy)
+
+	openresty:
+		:+1:
+
+	static HTML Apache:
+		:+1:
+		But maybe keep old assets around for a while / forever?
+		Content-based hashing ftw
+
+	Python WSGI:
+		mod_wsgi mostly handles this
+		some 500s, can be mitigated at LB or client-side retries
+		other WSGI containers: Not so much.
+			Alternate between a pair?
+
+	Java:
+		tomcat7 parallel deployments
+		PermGen Space
+
+What comes next
+	What's missing?
+
+	Better build time:
+		Too much class hierarchy
+		Not enough implicit config through convention
+
+	Better orchestration:
+		Deploy button
+		Integrated graphs
+
+	Modernize:
+		Wheels
+		Python 3
+
+
+Other topics
+	VMs & Containers
+	Log collection
+	Crash collection
+	DB migrations
+	envhub
+	github testing hooks
+
+END
+
+Abstract:
+How do we get work from a developer's laptop to a production server? How do we do this repeatedly? How do we avoid releasing bad patches? How do we get changes out as fast as possible? And what happens to requests during a deploy? If you want continuous deployment, you have to solve these problems.
+
+How do you handle configuration, so that the same code can run in multiple environment? From a developers laptop, to QA environments, to production. What about the quirks of each machine in production?
+
+This talk will look at the path Yola took, with Jenkins, yoconfigurator, yodeploy. It's by no means a complete solution, but it's good enough that I rarely find myself working on it, these days.
+
+We will cover the pros and cons of each path one can take. The whole platform architecture is really affected by this. We can talk about: Bare hardware, virtualization, containerization, build systems, linux distributions packages, language package ecosystems, configuration management systems, notifications, secret distribution, and much more.

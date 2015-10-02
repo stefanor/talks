@@ -1,0 +1,48 @@
+{
+    "yoconfigurator": {
+        "app": "graphite"
+    },
+    "graphite": {
+        "path": {
+            "data": "/srv/graphite/data",
+            "log_dir": "/var/log/graphite"
+        },
+        "domain": "graphite.example.net",
+        "db": {
+            "engine": "django.db.backends.mysql",
+            "host": "",
+            "name": "graphite",
+            "password": "",
+            "port": "",
+            "user": ""
+        },
+        "htpasswd": {
+            "users": {
+                "yola": "super secret password"
+            }
+        },
+        "ssl": {
+            "cert": "/etc/ssl/wildcard.example.net.pem",
+            "private": "/etc/ssl/wildcard.example.net.key"
+        }
+    },
+    "common": {
+        "wild_ssl_certs": {
+            "services": {
+                "cert": "/etc/ssl/wildcard.example.net.pem",
+                "private": "/etc/ssl/wildcard.example.net.key"
+            }
+        },
+        "domain": {
+            "services": "example.net"
+        },
+        "graphite_carbon": {
+            "text_port": 2003,
+            "host": "graphite.example.net",
+            "pickle_port": 2004
+        }
+    },
+    "deploy": {
+        "root": "/srv/"
+    }
+}

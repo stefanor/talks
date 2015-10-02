@@ -1,0 +1,1 @@
+exec /home/stefanor/git/yola/yoconfigurator/virtualenv/bin/python /home/stefanor/git/yola/yoconfigurator/bin/configurator.py -d /home/stefanor/git/talks/2015/2015-09-30-pycon.za/examples/central "$@"

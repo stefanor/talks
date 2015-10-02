@@ -1,0 +1,75 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{ulem}\normalem
+\usepackage{hyperref}
+
+\newcommand{\TALKURL}{%
+  \url{https://github.com/stefanor/talks}}
+
+\title{The road to continuous deployment}
+\author{Stefano Rivera}
+\institute{Yola}
+\date[Johannesburg, South Africa]{2 October 2015\\
+  Pycon ZA}
+
+\mode<presentation>
+{
+  \usetheme{Luebeck}
+  \usecolortheme{beaver}
+  \setbeamercovered{transparent}
+}
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\setbeamertemplate{headline}{}
+
+\begin{document}
+
+{
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+
+\include{body}
+
+{
+\begin{frame}{}
+  \begin{center}
+    \vfill \vfill
+    {\LARGE Thanks!}
+    \vfill \vfill
+    {\huge Questions?}
+    \vfill
+    Stefano Rivera \\
+    \texttt{stefanor@debian.org} \\\vfill
+    {\small \url{http://tumbleweed.org.za/}}
+  \end{center}
+  \vfill \vfill
+  {\tiny
+    \begin{center}
+      \begin{tabular}{l@{\hspace{1em}}l}
+        \multicolumn{2}{l}{Slides:} \\
+        Available at
+        & \TALKURL
+        \\
+        Built using \LaTeX\ Beamer
+        \\
+        Copyright \copyright
+        & 2013--2014, Stefano Rivera
+        \\
+        License
+        & \href{http://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0 ---
+          Creative Commons Attribution-ShareAlike 3.0}
+        \\
+      \end{tabular}
+    \end{center}}
+\end{frame}
+}
+\end{document}
