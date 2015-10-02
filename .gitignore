@@ -7,3 +7,4 @@
 *.pdf.mk
 *.snm
 *.toc
+*.pyc
