@@ -1,0 +1,4 @@
+---
+input:
+  source_artifact: 860082
+target_distribution: debian:unstable

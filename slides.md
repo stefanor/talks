@@ -1,0 +1,263 @@
+# Using debusine to automate your QA
+
+.fx: title_slide
+
+[`https://deb.li/debusine`](https://reimbursements.debian.net/)
+
+Carles Pina i Estany <`cpina@debian.org`>,
+Colin Watson <`cjwatson@debian.org`>,
+Enrico Zini <`enrico@debian.org`>,
+Stefano Rivera <`stefanor@debian.org`>
+
+A [Freexian](https://www.freexian.com/) project, funded with the help of
+the [Sovereign Tech Fund](https://www.sovereign.tech/programs/fund).
+
+MiniDebConf Toulouse at Capitole du Libre, 16 November 2024
+
+---
+
+# Quick Introduction
+
+.fx: introduction
+
+* Who we are
+* What is Debusine
+* State of the Project
+
+# Presenter Notes
+
+[5 minutes to whip through these]
+
+---
+
+# Who are we:
+
+* Debian Developers
+* Freexian collaborators
+* Paid to work on Debusine
+* Funded this year by STF
+
+---
+
+# What is Debusine:
+
+* Potential future infrastructure for Debian
+* Solving Freexian’s needs as a Debian derivative
+
+    * Building packages
+    * QA tasks and workflows
+    * Package and secure boot signing
+    * APT Repositories (future)
+
+* Potential SASS product for Freexian as a Debian Services Company
+
+---
+
+# State of the Project:
+
+* Heavy development
+* Core foundations in place
+* Building out higher-level functionality
+* Generally useable
+* In production for Freexian
+
+---
+
+# Example
+
+# Presenter Notes
+
+[2 minutes to run this]
+
+See examples/README
+
+Example of a source package upload and trigger the debian pipeline:
+Prepare a source package
+Maybe distro-info? It builds for multiple architectures and has autopkgtests.
+debusine.client import-debian-artifact distro_info.dsc
+debusine.client create-workflow workflow:debian-pipeline --data pipeline.yaml
+Show pipeline yaml
+
+---
+
+# Debusine Concepts
+
+.fx: introduction
+
+* Artifacts
+* Work Requests
+* Collections
+* Lookups
+* Workflows
+
+# Presenter Notes
+
+[10 minutes for the concepts]
+
+---
+
+# Artifacts
+
+* E.g. `distro_info.dsc` becomes a `debian:source-package`
+* Strongly typed objects with JSON metadata
+
+    * Types: `debian:source-package`, `debian:binary-package`, `debian:upload`, `debian:package-build-log`, etc.
+
+* Contain files
+* Stored by hash in a blob store or on disk
+
+---
+
+# Work Requests
+
+* sbuild task
+* Strongly typed with JSON metadata
+* Inputs and outputs are artifacts
+* Logs are artifacts
+* Build happens on an external worker with no privileged access
+* Build is sandboxed in an environment:
+
+    * Unshare, Incus LXC, Incus VM, QEMU
+
+* The environment also comes from an artifact
+
+---
+
+# Collections
+
+* Strongly typed with defined semantics
+* Hold a set of similar artifacts
+* E.g. debian:archive, debian:suite, debian:environments.
+* Can also hold bare-data JSON objects
+
+    * Configuration
+    * Promises
+
+---
+
+# Lookups
+
+* Finds one or many items in a collection by attributes
+* Can be specified as a string or dictionary
+* Or even just bare artifact IDs.
+
+---
+
+# Workflows
+
+* One request triggers a tree of related work requests
+* Automates common workflows using templates
+* Currently driven by Python code in the server
+* Has an internal collection for artifacts produced in the workflow.
+
+---
+
+# What has been achieved in the last year
+
+* STF funded milestones
+* Approx 3 months each
+
+# Presenter Notes
+
+[5 minutes to whip through these]
+
+---
+
+# STF M1: QA Tasks
+
+* Build out QA tasks (sbuild, autopkgtest, lintian, piuparts, blhc)
+* Open dialogue with these QA teams
+* Public debusine.debian.net instance
+* SSO
+* Web views for tasks
+* Executor interface for sandboxing task and providing environments
+
+---
+
+# STF M2: Scheduled Tasks
+
+* Workflows
+* Collections
+
+---
+
+# STF M3: Buildd Network
+
+* Replace Freexian’s buildd in production
+* Talk to the Debian buildd team about requirements
+* Sbuild workflow
+* BD-Uninstallable waits
+* Package upload workflow
+* Binnmu, give-back
+* Build log collections
+* Task queue overviews
+
+---
+
+# STF M4: Security builds
+
+* Talk to the Debian security team
+* Implement private workspaces
+* Workflow to copy from private workspace to a public one
+* Secure boot signing
+* Review steps in workflows
+* Debdiff task
+* Reverse autopkgtest workflow
+
+---
+
+# Where is this going next?
+
+* 2025 milestones:
+
+    * Increase Debusine's maintainability
+    * Basic Package Repositories (PPAs)
+    * Advanced features for Packgae Repositories
+
+# Presenter Notes
+
+[2 minutes]
+
+---
+
+# Funding
+
+* STF
+* Freexian
+* Other funding sources
+
+# Presenter Notes
+
+[2 minutes]
+
+---
+
+# Future of Debusine
+
+# Presenter Notes
+
+[3 minutes]
+
+---
+
+# Getting involved
+
+* Open development on salsa
+
+    * GPLv3, no CLA
+    * Modern Python, Django, lots of type annotations, 100% branch coverage
+
+* Bitesize tasks
+* Backlogged tasks that don’t fit the funded roadmap
+
+# Presenter Notes
+
+[5 minutes]
+
+---
+
+# Questions?
+
+# Presenter Notes
+
+[5 minutes]
