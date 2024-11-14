@@ -1491,6 +1491,10 @@ the <a href="https://www.sovereign.tech/programs/fund">Sovereign Tech Fund</a>.<
             <header><h1>Presenter Notes</h1></header>
             <section>
             
+              <p>Welcome.</p>
+<p>We'll be rotating presenters. Introduce them all.</p>
+<p>Let's talk about how you can use Debusine to automate your Debian QA.</p>
+            
             </section>
           </div>
           <footer>
@@ -1516,8 +1520,8 @@ the <a href="https://www.sovereign.tech/programs/fund">Sovereign Tech Fund</a>.<
             
             
             <section><ul>
-<li>Who we are</li>
 <li>What is Debusine</li>
+<li>Who we are</li>
 <li>State of the Project</li>
 </ul></section>
             
@@ -1527,6 +1531,8 @@ the <a href="https://www.sovereign.tech/programs/fund">Sovereign Tech Fund</a>.<
             <section>
             
               <p>[5 minutes to whip through these]</p>
+<p>Quick introduction, then we'll get onto a demo and really talk through
+how things work.</p>
             
             </section>
           </div>
@@ -1547,42 +1553,6 @@ the <a href="https://www.sovereign.tech/programs/fund">Sovereign Tech Fund</a>.<
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
         <div class="slide slide-3">
-          <div class="inner">
-            
-            <header><h1>Who are we:</h1></header>
-            
-            
-            <section><ul>
-<li>Debian Developers</li>
-<li>Freexian collaborators</li>
-<li>Paid to work on Debusine</li>
-<li>Funded this year by STF</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              3/22
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-4">
           <div class="inner">
             
             <header><h1>What is Debusine:</h1></header>
@@ -1619,6 +1589,42 @@ the <a href="https://www.sovereign.tech/programs/fund">Sovereign Tech Fund</a>.<
             </aside>
             
             <aside class="page_number">
+              3/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>Who are we:</h1></header>
+            
+            
+            <section><ul>
+<li>Debian Developers</li>
+<li>Freexian collaborators</li>
+<li>Paid to work on Debusine</li>
+<li>Funded this year by STF</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
               4/22
             </aside>
           </footer>
@@ -1638,7 +1644,16 @@ the <a href="https://www.sovereign.tech/programs/fund">Sovereign Tech Fund</a>.<
 <li>Core foundations in place</li>
 <li>Building out higher-level functionality</li>
 <li>Generally useable</li>
-<li>In production for Freexian</li>
+<li>
+<p>Public instance: debusine.debian.net</p>
+<ul>
+<li>Used for testing the Python 3.13 transition recently.</li>
+<li>And large-scale rebuilds around the Python ecosystem.</li>
+</ul>
+</li>
+<li>
+<p>In production for Freexian</p>
+</li>
 </ul></section>
             
           </div>
@@ -1722,6 +1737,8 @@ Show pipeline yaml</p>
             <section>
             
               <p>[10 minutes for the concepts]</p>
+<p>While we're waiting for the Demo to complete, let's talk about what's
+happening in debusine.</p>
             
             </section>
           </div>
@@ -1765,6 +1782,10 @@ Show pipeline yaml</p>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
             <section>
+            
+              <p>Look at our uploaded source package artifact.
+Describe how artifacts work in general.</p>
+<p>Blob store isn't implemented yet.</p>
             
             </section>
           </div>
@@ -1812,6 +1833,9 @@ Show pipeline yaml</p>
             <header><h1>Presenter Notes</h1></header>
             <section>
             
+              <p>Describe work requests, then look at the example work request that we're
+running.</p>
+            
             </section>
           </div>
           <footer>
@@ -1841,10 +1865,10 @@ Show pipeline yaml</p>
 <li>Hold a set of similar artifacts</li>
 <li>E.g. debian:archive, debian:suite, debian:environments.</li>
 <li>
-<p>Can also hold bare-data JSON objects</p>
+<p>Can also hold bare-data JSON objects:</p>
 <ul>
 <li>Configuration</li>
-<li>Promises</li>
+<li>Promises for artifacts coming soon</li>
 </ul>
 </li>
 </ul></section>
@@ -1853,6 +1877,11 @@ Show pipeline yaml</p>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
             <section>
+            
+              <p>We skimmed over environments when we looked at the artifact.
+Debusine has a collection of build environments, updated daily, that we
+can use.</p>
+<p>Describe collections.</p>
             
             </section>
           </div>
@@ -1880,14 +1909,34 @@ Show pipeline yaml</p>
             
             <section><ul>
 <li>Finds one or many items in a collection by attributes</li>
-<li>Can be specified as a string or dictionary</li>
-<li>Or even just bare artifact IDs.</li>
+<li>
+<p>Can be specified as a string:</p>
+<p><code>bookworm@debian:suite/src2_2.0</code></p>
+</li>
+<li>
+<p>Or dictionary:</p>
+<p><pre><code>
+collection: debian/trixie
+child_type: artifact
+category: debian:binary-package
+data__package: libc6
+data__version: "2.37-15"
+</code></pre></p>
+</li>
+<li>
+<p>Or even just bare artifact IDs.</p>
+</li>
 </ul></section>
             
           </div>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
             <section>
+            
+              <p>The environment was found using a lookup into the <code>debian</code> environments
+collection for an <code>unstable</code> tarball. Under the hood, restrictions for a
+tarball suitable for <code>unshare</code> would have been added.</p>
+<p>Describe collections.</p>
             
             </section>
           </div>
@@ -1999,6 +2048,8 @@ Show pipeline yaml</p>
             <header><h1>Presenter Notes</h1></header>
             <section>
             
+              <p>Before STF M1 we had artifacts and the basic sbuild task (using schroot).</p>
+            
             </section>
           </div>
           <footer>
@@ -2032,6 +2083,8 @@ Show pipeline yaml</p>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
             <section>
+            
+              <p>These were both big complex tasks with</p>
             
             </section>
           </div>
@@ -2101,7 +2154,7 @@ Show pipeline yaml</p>
 <li>Talk to the Debian security team</li>
 <li>Implement private workspaces</li>
 <li>Workflow to copy from private workspace to a public one</li>
-<li>Secure boot signing</li>
+<li>Secure boot signing (and HSMs)</li>
 <li>Review steps in workflows</li>
 <li>Debdiff task</li>
 <li>Reverse autopkgtest workflow</li>
@@ -2141,8 +2194,15 @@ Show pipeline yaml</p>
 <p>2025 milestones:</p>
 <ul>
 <li>Increase Debusine's maintainability</li>
-<li>Basic Package Repositories (PPAs)</li>
-<li>Advanced features for Packgae Repositories</li>
+<li>Basic Package Repositories</li>
+<li>
+<p>Advanced features for Package Repositories</p>
+<ul>
+<li>Self-service repositories (PPAs)</li>
+<li>Better UI</li>
+<li>Copy packages</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul></section>
@@ -2153,6 +2213,8 @@ Show pipeline yaml</p>
             <section>
             
               <p>[2 minutes]</p>
+<p>No maintenance budget in 2024, STF features drove the schedule for the
+year. We need to have some space for refactoring and misc work.</p>
             
             </section>
           </div>
@@ -2179,8 +2241,8 @@ Show pipeline yaml</p>
             
             
             <section><ul>
-<li>STF</li>
 <li>Freexian</li>
+<li>STF</li>
 <li>Other funding sources</li>
 </ul></section>
             
@@ -2190,6 +2252,9 @@ Show pipeline yaml</p>
             <section>
             
               <p>[2 minutes]</p>
+<p>STF Funding made a big boost to development in 2024.</p>
+<p>We expect less funding from STF in 2025, so we'll look at some other
+sources too.</p>
             
             </section>
           </div>
@@ -2341,13 +2406,13 @@ Show pipeline yaml</p>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide:3">Who are we:</a></th>
+        <th><a href="#slide:3">What is Debusine:</a></th>
         <td><a href="#slide:3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide:4">What is Debusine:</a></th>
+        <th><a href="#slide:4">Who are we:</a></th>
         <td><a href="#slide:4">4</a></td>
       </tr>
       
