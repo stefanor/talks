@@ -51,7 +51,7 @@ how things work.
     * Package and secure boot signing
     * APT Repositories (future)
 
-* Potential SASS product for Freexian as a Debian Services Company
+* Potential SAAS product for Freexian as a Debian Services Company
 
 ---
 
