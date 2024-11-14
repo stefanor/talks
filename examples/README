@@ -1,5 +1,5 @@
 $ apt-get source -d distro-info
 $ python3 -m debusine.client import-debian-artifact distro-info_1.12.dsc
 Update sbuild-unshare.yaml
-$ python3 -m create-workflow sbuild-unshare --data sbuild-unshare.yaml
-$ cat sbuild-unshare.yaml
+$ python3 -m debusine.client create-workflow sbuild-unshare --data sbuild-unshare.yml
+$ cat sbuild-unshare.yml

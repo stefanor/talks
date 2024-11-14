@@ -14,28 +14,30 @@ the [Sovereign Tech Fund](https://www.sovereign.tech/programs/fund).
 
 MiniDebConf Toulouse at Capitole du Libre, 16 November 2024
 
+# Presenter Notes
+
+Welcome.
+
+We'll be rotating presenters. Introduce them all.
+
+Let's talk about how you can use Debusine to automate your Debian QA.
+
 ---
 
 # Quick Introduction
 
 .fx: introduction
 
-* Who we are
 * What is Debusine
+* Who we are
 * State of the Project
 
 # Presenter Notes
 
 [5 minutes to whip through these]
 
----
-
-# Who are we:
-
-* Debian Developers
-* Freexian collaborators
-* Paid to work on Debusine
-* Funded this year by STF
+Quick introduction, then we'll get onto a demo and really talk through
+how things work.
 
 ---
 
@@ -53,12 +55,26 @@ MiniDebConf Toulouse at Capitole du Libre, 16 November 2024
 
 ---
 
+# Who are we:
+
+* Debian Developers
+* Freexian collaborators
+* Paid to work on Debusine
+* Funded this year by STF
+
+---
+
 # State of the Project:
 
 * Heavy development
 * Core foundations in place
 * Building out higher-level functionality
 * Generally useable
+* Public instance: debusine.debian.net
+
+    * Used for testing the Python 3.13 transition recently.
+    * And large-scale rebuilds around the Python ecosystem.
+
 * In production for Freexian
 
 ---
@@ -94,6 +110,9 @@ Show pipeline yaml
 
 [10 minutes for the concepts]
 
+While we're waiting for the Demo to complete, let's talk about what's
+happening in debusine.
+
 ---
 
 # Artifacts
@@ -105,6 +124,13 @@ Show pipeline yaml
 
 * Contain files
 * Stored by hash in a blob store or on disk
+
+# Presenter Notes
+
+Look at our uploaded source package artifact.
+Describe how artifacts work in general.
+
+Blob store isn't implemented yet.
 
 ---
 
@@ -121,6 +147,11 @@ Show pipeline yaml
 
 * The environment also comes from an artifact
 
+# Presenter Notes
+
+Describe work requests, then look at the example work request that we're
+running.
+
 ---
 
 # Collections
@@ -128,18 +159,47 @@ Show pipeline yaml
 * Strongly typed with defined semantics
 * Hold a set of similar artifacts
 * E.g. debian:archive, debian:suite, debian:environments.
-* Can also hold bare-data JSON objects
+* Can also hold bare-data JSON objects:
 
     * Configuration
-    * Promises
+    * Promises for artifacts coming soon
+
+# Presenter Notes
+
+We skimmed over environments when we looked at the artifact.
+Debusine has a collection of build environments, updated daily, that we
+can use.
+
+Describe collections.
 
 ---
 
 # Lookups
 
 * Finds one or many items in a collection by attributes
-* Can be specified as a string or dictionary
+* Can be specified as a string:
+
+    `bookworm@debian:suite/src2_2.0`
+
+* Or dictionary:
+
+    <pre><code>
+    collection: debian/trixie
+    child_type: artifact
+    category: debian:binary-package
+    data__package: libc6
+    data__version: "2.37-15"
+    </code></pre>
+
 * Or even just bare artifact IDs.
+
+# Presenter Notes
+
+The environment was found using a lookup into the `debian` environments
+collection for an `unstable` tarball. Under the hood, restrictions for a
+tarball suitable for `unshare` would have been added.
+
+Describe collections.
 
 ---
 
@@ -172,12 +232,20 @@ Show pipeline yaml
 * Web views for tasks
 * Executor interface for sandboxing task and providing environments
 
+# Presenter Notes
+
+Before STF M1 we had artifacts and the basic sbuild task (using schroot).
+
 ---
 
 # STF M2: Scheduled Tasks
 
 * Workflows
 * Collections
+
+# Presenter Notes
+
+These were both big complex tasks with
 
 ---
 
@@ -199,7 +267,7 @@ Show pipeline yaml
 * Talk to the Debian security team
 * Implement private workspaces
 * Workflow to copy from private workspace to a public one
-* Secure boot signing
+* Secure boot signing (and HSMs)
 * Review steps in workflows
 * Debdiff task
 * Reverse autopkgtest workflow
@@ -211,24 +279,36 @@ Show pipeline yaml
 * 2025 milestones:
 
     * Increase Debusine's maintainability
-    * Basic Package Repositories (PPAs)
-    * Advanced features for Packgae Repositories
+    * Basic Package Repositories
+    * Advanced features for Package Repositories
+
+        * Self-service repositories (PPAs)
+        * Better UI
+        * Copy packages
 
 # Presenter Notes
 
 [2 minutes]
+
+No maintenance budget in 2024, STF features drove the schedule for the
+year. We need to have some space for refactoring and misc work.
 
 ---
 
 # Funding
 
-* STF
 * Freexian
+* STF
 * Other funding sources
 
 # Presenter Notes
 
 [2 minutes]
+
+STF Funding made a big boost to development in 2024.
+
+We expect less funding from STF in 2025, so we'll look at some other
+sources too.
 
 ---
 
