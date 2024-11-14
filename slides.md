@@ -274,17 +274,37 @@ These were both big complex tasks with
 
 ---
 
-# Where is this going next?
+# Future of Debusine
 
-* 2025 milestones:
+* Busy finishing M4
+* About to start on M5
+* 2025 STF Milestones
 
-    * Increase Debusine's maintainability
-    * Basic Package Repositories
-    * Advanced features for Package Repositories
+# Presenter Notes
 
-        * Self-service repositories (PPAs)
-        * Better UI
-        * Copy packages
+[3 minutes]
+
+---
+
+# STF M5: Large Scale experiments and Cloud
+
+* Record build resource statistics (build time, RAM + disk usage)
+* Auto-spawn external build workers in the cloud
+* Cloud storage for artifacts
+* Custom workflows
+* Web interface to monitor experiment results
+
+---
+
+# 2025 STF Milestones
+
+* Increase Debusine's maintainability
+* Basic Package Repositories
+* Advanced features for Package Repositories
+
+    * Self-service repositories (PPAs)
+    * Better UI
+    * Copy packages
 
 # Presenter Notes
 
@@ -309,14 +329,6 @@ STF Funding made a big boost to development in 2024.
 
 We expect less funding from STF in 2025, so we'll look at some other
 sources too.
-
----
-
-# Future of Debusine
-
-# Presenter Notes
-
-[3 minutes]
 
 ---
 
