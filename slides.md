@@ -20,7 +20,7 @@ Welcome.
 
 We'll be rotating presenters. Introduce them all.
 
-Let's talk about how you can use Debusine to automate your Debian QA.
+Let's talk about how you can use debusine to automate your Debian QA.
 
 ---
 
@@ -28,7 +28,7 @@ Let's talk about how you can use Debusine to automate your Debian QA.
 
 .fx: introduction
 
-* What is Debusine
+* What is debusine
 * Who we are
 * State of the Project
 
@@ -41,7 +41,7 @@ how things work.
 
 ---
 
-# What is Debusine:
+# What is debusine:
 
 * Potential future infrastructure for Debian
 * Solving Freexian’s needs as a Debian derivative
@@ -59,7 +59,7 @@ how things work.
 
 * Debian Developers
 * Freexian collaborators
-* Paid to work on Debusine
+* Paid to work on debusine
 * Funded this year by STF
 
 ---
@@ -274,7 +274,7 @@ These were both big complex tasks with
 
 ---
 
-# Future of Debusine
+# Future of debusine
 
 * Busy finishing M4
 * About to start on M5
