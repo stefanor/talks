@@ -298,7 +298,7 @@ These were both big complex tasks with
 
 # 2025 STF Milestones
 
-* Increase Debusine's maintainability
+* Increase debusine's adoption and maintainability
 * Basic Package Repositories
 * Advanced features for Package Repositories
 
