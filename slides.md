@@ -158,11 +158,11 @@ running.
 
 * Strongly typed with defined semantics
 * Hold a set of similar artifacts
-* E.g. debian:archive, debian:suite, debian:environments.
+* E.g. `debian:archive`, `debian:suite`, `debian:environments`.
 * Can also hold bare-data JSON objects:
 
     * Configuration
-    * Promises for artifacts coming soon
+    * Promises for to-be-created artifacts
 
 # Presenter Notes
 

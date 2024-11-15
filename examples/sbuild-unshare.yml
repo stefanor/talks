@@ -1,4 +1,4 @@
 ---
 input:
-  source_artifact: 860082
+  source_artifact: 667
 target_distribution: debian:unstable
