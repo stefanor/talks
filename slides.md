@@ -283,7 +283,7 @@ These were both big complex tasks with
 * Sbuild workflow
 * BD-Uninstallable waits
 * Package upload workflow
-* Binnmu, give-back
+* BinNMU, give-back
 * Build log collections
 * Task queue overviews
 
