@@ -222,7 +222,7 @@ Describe collections.
     * Low level workflows: `sbuild`, `autopkgtest`, `lintian`, `piuparts`
     * High level workflows: `qa`, `debian_pipeline`
 
-* For the brave: [debusine-rebuilds](https://salsa.debian.org/stefanor/debusine-rebuilds) can orchestrate large-scaler rebuilds using debusine work requests.
+* For the brave: [debusine-rebuilds](https://salsa.debian.org/stefanor/debusine-rebuilds) can orchestrate large-scale rebuilds using debusine work requests.
 
 # Presenter Notes
 
