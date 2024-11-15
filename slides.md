@@ -212,6 +212,33 @@ Describe collections.
 
 ---
 
+# Using debusine to automate your QA
+
+* Debian Developers can use [debusine.debian.net](https://debusine.debian.net/)
+* Client configuration instructions are [in our docs](https://freexian-team.pages.debian.net/debusine/tutorials/getting-started-with-debusine.html#install-the-client-and-configure-it)
+* Use one of [our workflows](https://freexian-team.pages.debian.net/debusine/reference/workflows.html)
+
+    * Low level work requests
+    * Low level workflows: `sbuild`, `autopkgtest`, `lintian`, `piuparts`
+    * High level workflows: `qa`, `debian_pipeline`
+
+* For the brave: [debusine-rebuilds](https://salsa.debian.org/stefanor/debusine-rebuilds) can orchestrate large-scaler rebuilds using debusine work requests.
+
+# Presenter Notes
+
+You've seen a demo. If you want to go home and do any of this, start
+with our docs.
+
+Here are some of the tools debusine provides that you can use to
+automate Debian QA.
+
+We have lower level building blocks that can run individual QA tasks,
+but you probably want to use a higher level workflow like `qa`, or
+`debian_pipeline`. `debian_pipeline` builds your package, runs all the
+QA tests on it, and if they pass it can upload the result to Debian.
+
+---
+
 # What has been achieved in the last year
 
 * STF funded milestones
