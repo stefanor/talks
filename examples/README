@@ -3,6 +3,6 @@ https://freexian-team.pages.debian.net/debusine/tutorials/getting-started-with-d
 
 $ apt-get source -d distro-info
 $ debusine import-debian-artifact distro-info_1.12.dsc
-Update sbuild-unshare.yaml
-$ debusine create-workflow sbuild-unshare --data sbuild-unshare.yml
-$ cat sbuild-unshare.yml
+Update debian-qa-unshare.yaml
+$ debusine create-workflow debian-qa-unshare --data debian-qa-unshare.yml
+$ cat debian-qa-unshare.yml
