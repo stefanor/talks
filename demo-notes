@@ -1,0 +1,21 @@
+debusine create-workflow-template debian_sid debian_pipeline <<EOF
+vendor: debian
+codename: sid
+enable_upload: true
+upload_merge_uploads: false
+upload_include_binaries: false
+EOF
+
+debusine import-debian-artifact foo.dsc
+# note artifact ID
+
+debusine create-workflow debian_sid <<EOF
+source_artifact: ID-FROM-ABOVE
+upload_delayed_days: 1
+EOF
+
+# wait until workflow reaches "Wait for signature"
+
+debusine provide-signature ID  # command from "Wait for signature" page in web UI
+
+# remember to cancel upload from DELAYED later!
