@@ -70,10 +70,11 @@ how things work.
 * Core foundations in place
 * Building out higher-level functionality
 * Generally useable
-* Public instance: debusine.debian.net
+* Public instance: [debusine.debian.net](https://debusine.debian.net/)
 
-    * Used for testing the Python 3.13 transition recently.
-    * And large-scale rebuilds around the Python ecosystem.
+    * 5 amd64 and 8 arm64 workers (with 32bit ability)
+    * Used for testing the Python 3.13 transition, recently (and others).
+    * Niels Thykier currently testing `Rules-Requires-Root: no` as default.
 
 * In production for Freexian
 
