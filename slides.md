@@ -2,7 +2,7 @@
 
 .fx: title_slide
 
-[`https://deb.li/debusine`](https://reimbursements.debian.net/)
+[`https://deb.li/debusine`](https://deb.li/debusine)
 
 Carles Pina i Estany <`cpina@debian.org`>,
 Colin Watson <`cjwatson@debian.org`>,
