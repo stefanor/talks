@@ -216,7 +216,7 @@ Describe collections.
 
 * Debian Developers can use [debusine.debian.net](https://debusine.debian.net/)
 * Client configuration instructions are [in our docs](https://freexian-team.pages.debian.net/debusine/tutorials/getting-started-with-debusine.html#install-the-client-and-configure-it)
-* Use one of [our workflows](https://freexian-team.pages.debian.net/debusine/reference/workflows.html)
+* Use one of [our workflows](https://freexian-team.pages.debian.net/debusine/reference/workflows/specs.html)
 
     * Low level work requests
     * Low level workflows: `sbuild`, `autopkgtest`, `lintian`, `piuparts`
