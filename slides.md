@@ -345,12 +345,15 @@ year. We need to have some space for refactoring and misc work.
 # Funding
 
 * Freexian
-* STF
+* [Sovereign Tech Fund](https://www.sovereign.tech/programs/fund)
 * Other funding sources
 
 # Presenter Notes
 
 [2 minutes]
+
+STF is the Sovereign Tech Fund, funded by German Federal Ministry for
+Economic Affairs and Climate Action.
 
 STF Funding made a big boost to development in 2024.
 
