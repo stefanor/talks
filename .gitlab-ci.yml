@@ -5,6 +5,7 @@ pages:
   - apt-get update
   - apt-get -y install darkslide make
   - make
+  - mkdir public
   - cp -a presentation.html custom.css images public/
   artifacts:
     paths:
