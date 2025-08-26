@@ -1,0 +1,12 @@
+image: debian:stable
+
+pages:
+  script:
+  - make
+  - cp -a presentation.html custom.css images public/
+  artifacts:
+    paths:
+    - public
+    expire_in: 1 hour
+  only:
+  - main
