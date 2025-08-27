@@ -2,6 +2,8 @@
 
 .fx: title_slide
 
+![](images/debian-openlogo.svg)
+
 Stefano Rivera <`stefanor@debian.org`>
 
 Buenos Aires, 27 August 2025
