@@ -34,3 +34,46 @@ code {
 .full_image .inner section {
 	top: 0;
 }
+
+.bg-img {
+	background-size: cover;
+}
+
+.bg-img h2 {
+	filter: drop-shadow(2px 2px white);
+	backdrop-filter: blur(1px) brightness(75%);
+}
+
+.bg-img li {
+	color: white;
+	backdrop-filter: blur(1px) brightness(75%);
+	filter: drop-shadow(2px 2px black);
+}
+
+.bg-trixie {
+	background-image: url(images/ceratopsian.svg);
+}
+
+.bg-community {
+	background-image: url(images/aigarius-wedding-IMG_1561.jpg);
+}
+
+.bg-debconf1 {
+	background-image: url(images/debconf1.jpg);
+}
+
+.bg-standup {
+	background-image: url(images/aigarius-IMG_1258.JPG);
+}
+
+.bg-dc18-hacklab {
+	background-image: url(images/IMG_4412-small.JPG);
+}
+
+.bg-dc25-cpu {
+	background-image: url(images/stefanor-2025-07-09_15.09.15.jpg);
+}
+
+.bg-dc23-talk {
+	background-image: url(images/IMG_2876.JPG);
+}

@@ -18,24 +18,34 @@ Buenos Aires, 27 August 2025
 * Attending DebConf since DebConf 11
 * DebConf Video Team core
 * DebConf Local Team for DebConf 16
-* Sit on DebConf Committee with Antonio Terceiro, Bernelle Verster,
-  Gunnar Wolf, **Nattie Mayer-Hutchings**, and Sruthi Chandran
+* Serve on the DebConf Committee with Antonio Terceiro, Bernelle
+  Verster, Gunnar Wolf, **Nattie Mayer-Hutchings**, and Sruthi Chandran
 
 ---
 
 # Debian
 
+.fx: bg-img bg-trixie
+
 * Free Software Linux Distribution, since 1993
 * Brings together 70 000 free software packages into a coherent system
-* More importantly, it's a community
-    * The distribution is entirely community run
-    * With some help from employees of companies that depend on it
+
+---
+
+## More importantly, it's a community
+
+.fx: bg-img bg-community
+
+* The distribution is entirely community run
+* With some help from employees of companies that depend on it
 * Around 1000 developers from 56 countries
 * \> 1370 Unique contributors in the last year
 
 ---
 
 # History of DebConf
+
+.fx: bg-img bg-debconf1
 
 * DebConf has been running since 2000
 * Making this the 27th DebConf
@@ -46,6 +56,8 @@ Buenos Aires, 27 August 2025
 
 # Goals of DebConf
 
+.fx: bg-img bg-standup
+
 * Face time for Debian community members
 * Discuss problems across teams
 * Share presentations on work
@@ -54,6 +66,8 @@ Buenos Aires, 27 August 2025
 ---
 
 # Not a typical conference
+
+.fx: bg-img bg-dc18-hacklab
 
 * Grass roots, typically in universities
 * Entirely volunteer run
@@ -76,6 +90,8 @@ Buenos Aires, 27 August 2025
 
 # DebCamp
 
+.fx: bg-img bg-dc25-cpu
+
 * A week devoted to working on Debian
 * Some groups sprint on projects together
 * Individuals work on their own projects
@@ -92,6 +108,8 @@ Buenos Aires, 27 August 2025
 ---
 
 # DebConf
+
+.fx: bg-img bg-dc23-talk
 
 * A more typical conference
 * Live Streams and recordings
@@ -220,11 +238,13 @@ There is a 40% discount for Argentine sponsors
 * Help to raise sponsorship
     * Contact engineers and management in companies you know
 * Help make the event happen:
-    * Join the local Team's Telegram
+    * Join the Debian Argentina Telegram
     * You don't have to be in Santa Fe (or Argentina)
 * Volunteer on site:
     * Attend the conference
     * Sign up for the volunteer system and take some tasks
+
+.qr: https://t.me/debian_argentina
 
 ---
 
