@@ -79,6 +79,8 @@ Buenos Aires, 27 August 2025
 
 # Two events in one
 
+.fx: bg-img bg-dc25-centre-vie
+
 * 1 week of DebCamp
     * Unscheduled sprints and discussions
     * Set up DebConf infrastructure
@@ -123,6 +125,8 @@ Buenos Aires, 27 August 2025
 
 # Budget
 
+.fx: bg-img bg-budget
+
 * Typically around 200k USD
     * Raised 290k USD sponsorship in France
     * Raised 190k USD sponsorship in South Korea
@@ -130,17 +134,23 @@ Buenos Aires, 27 August 2025
 * Also significant number of accommodation and food bursaries
 * Some income from fully self-paid attendees
     * Total France income was 440k USD
-    * South Korea had 230k USD
+    * South Korea was 230k USD
 
 ---
 
 # Raising sponsorship
 
+.fx: bg-img bg-dc17-roche
+
 * We have some regular international sponsors
 * Local sponsors require local connections
-* If you know an organization that could sponsor, get in touch with us
+* You can help here!
 
 ---
+
+## Sponsorship Packages
+
+.fx: bg-img bg-dc18-skymizer
 
 <table>
     <thead>
@@ -235,6 +245,8 @@ There is a 40% discount for Argentine sponsors
 
 # How to help
 
+.fx: bg-img bg-dc24-teams
+
 * Help to raise sponsorship
     * Contact engineers and management in companies you know
 * Help make the event happen:
@@ -250,6 +262,8 @@ There is a 40% discount for Argentine sponsors
 
 # Existing community teams
 
+.fx: bg-img bg-women
+
 * Bursary
 * Video
 * Content (needs assistance)
@@ -263,6 +277,8 @@ There is a 40% discount for Argentine sponsors
 
 # Organizing a DebConf
 
+.fx: bg-img bg-dc25-fd
+
 * Accommodation
 * Food
 * Conference Space
@@ -271,6 +287,8 @@ There is a 40% discount for Argentine sponsors
 ---
 
 # Accommodation
+
+.fx: bg-img bg-dc25-dorm
 
 * Typically shared university dormitories
 * Hotels when we have to
@@ -283,8 +301,9 @@ There is a 40% discount for Argentine sponsors
 
 # Food
 
+.fx: bg-img bg-dc25-eating
+
 * Basic filling meals
 * Many vegan attendees
 * A few complex dietary requests (not critical)
 * Clear labels including allergens
-

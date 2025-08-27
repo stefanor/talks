@@ -39,12 +39,12 @@ code {
 	background-size: cover;
 }
 
-.bg-img h2 {
+.bg-img h1, .bg-img h2 {
 	filter: drop-shadow(2px 2px white);
 	backdrop-filter: blur(1px) brightness(75%);
 }
 
-.bg-img li {
+.bg-img section {
 	color: white;
 	backdrop-filter: blur(1px) brightness(75%);
 	filter: drop-shadow(2px 2px black);
@@ -66,6 +66,10 @@ code {
 	background-image: url(images/aigarius-IMG_1258.JPG);
 }
 
+.bg-dc17-roche {
+	background-image: url(images/dc17-roche.jpg);
+}
+
 .bg-dc18-hacklab {
 	background-image: url(images/IMG_4412-small.JPG);
 }
@@ -76,4 +80,36 @@ code {
 
 .bg-dc23-talk {
 	background-image: url(images/IMG_2876.JPG);
+}
+
+.bg-budget {
+	background-image: url(images/budget.jpg);
+}
+
+.bg-women {
+	background-image: url(images/aigarius-IMG_2806.JPG);
+}
+
+.bg-dc25-eating {
+	background-image: url(images/dc25-eating.jpg);
+}
+
+.bg-dc25-fd {
+	background-image: url(images/dc25-fd.jpg);
+}
+
+.bg-dc18-skymizer {
+	background-image: url(images/IMG_4449.JPG);
+}
+
+.bg-dc25-centre-vie {
+	background-image: url(images/aigarius-IMG_1241.JPG);
+}
+
+.bg-dc24-teams {
+	background-image: url(images/dc24-teams.jpg);
+}
+
+.bg-dc25-dorm {
+	background-image: url(images/room-with-integrated-shower.jpg);
 }
