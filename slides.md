@@ -77,7 +77,7 @@ Buenos Aires, 27 August 2025
 
 ---
 
-# Two events in one
+## Two events in one
 
 .fx: bg-img bg-dc25-centre-vie
 
@@ -85,12 +85,11 @@ Buenos Aires, 27 August 2025
     * Unscheduled sprints and discussions
     * Set up DebConf infrastructure
 * 1 week of DebConf
-    * 3 videoed talk rooms
     * 1 day off for Day Trips
 
 ---
 
-# DebCamp
+## DebCamp
 
 .fx: bg-img bg-dc25-cpu
 
@@ -103,13 +102,13 @@ Buenos Aires, 27 August 2025
 
 ---
 
-# Daily arrivals
+## Daily arrivals
 
 ![arrivals](images/dc25-arrivals.png)
 
 ---
 
-# DebConf
+## DebConf
 
 .fx: bg-img bg-dc23-talk
 
@@ -120,6 +119,18 @@ Buenos Aires, 27 August 2025
 * Local language sessions for outreach
 * Hacklabs (working areas)
 * Some special activities (Day Trip day, conference dinner, etc.)
+
+---
+
+# Organizing a DebConf
+
+.fx: bg-img bg-dc25-fd
+
+* Raise Sponsorship
+* Accommodation
+* Food
+* Conference Space
+* Internet Access
 
 ---
 
@@ -138,7 +149,7 @@ Buenos Aires, 27 August 2025
 
 ---
 
-# Raising sponsorship
+## Raising sponsorship
 
 .fx: bg-img bg-dc17-roche
 
@@ -243,50 +254,7 @@ There is a 40% discount for Argentine sponsors
 
 ---
 
-# How to help
-
-.fx: bg-img bg-dc24-teams
-
-* Help to raise sponsorship
-    * Contact engineers and management in companies you know
-* Help make the event happen:
-    * Join the Debian Argentina Telegram
-    * You don't have to be in Santa Fe (or Argentina)
-* Volunteer on site:
-    * Attend the conference
-    * Sign up for the volunteer system and take some tasks
-
-.qr: https://t.me/debian_argentina
-
----
-
-# Existing community teams
-
-.fx: bg-img bg-women
-
-* Bursary
-* Video
-* Content (needs assistance)
-* Sponsorship (needs assistance)
-* Front Desk (needs assistance)
-* Publicity (needs assistance)
-* Website (needs assistance)
-* Cheese & Wine Party
-
----
-
-# Organizing a DebConf
-
-.fx: bg-img bg-dc25-fd
-
-* Accommodation
-* Food
-* Conference Space
-* Internet Access
-
----
-
-# Accommodation
+## Accommodation
 
 .fx: bg-img bg-dc25-dorm
 
@@ -299,7 +267,7 @@ There is a 40% discount for Argentine sponsors
 
 ---
 
-# Food
+## Food
 
 .fx: bg-img bg-dc25-eating
 
@@ -307,3 +275,68 @@ There is a 40% discount for Argentine sponsors
 * Many vegan attendees
 * A few complex dietary requests (not critical)
 * Clear labels including allergens
+
+---
+
+## Conference Spaces
+
+.fx: bg-img bg-dc25-opening
+
+* 3 videoed talk rooms
+* Ad-hoc BoF rooms
+* Hacklabs
+* Social Spaces
+
+---
+
+## Internet
+
+.fx: bg-img bg-dc24-switches
+
+* Usually easy, these days
+* Sometimes we have to get fibre installed
+
+---
+
+## Extra bits
+
+.fx: bg-img bg-dc25-daytrip
+
+* We have a few traditional (non-critical) events:
+* Day Trip
+* Cheese & Wine Party
+* Conference Dinner
+* etc.
+
+---
+
+## Conference Teams
+
+.fx: bg-img bg-women
+
+* Bursary
+* Video
+* Content
+* Sponsorship
+* Front Desk
+* Publicity
+* Website
+* Cheese & Wine Party
+
+---
+
+# How to help
+
+.fx: bg-img bg-dc24-teams
+
+* Help to raise sponsorship
+    * Contact engineers and management in companies you know
+* Help make the event happen:
+    * Join the Debian Argentina Telegram
+    * Hang out in `#debian-ar` (and `#debconf-team`) on `irc.oftc.net`
+    * You don't have to be in Santa Fe (or Argentina)
+* Volunteer on site:
+    * Attend the conference
+    * Sign up for the volunteer system and take some tasks
+
+.qr: https://t.me/debian_argentina
