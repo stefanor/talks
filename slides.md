@@ -335,8 +335,5 @@ There is a 40% discount for Argentine sponsors
     * Join the Debian Argentina Telegram
     * Hang out in `#debian-ar` (and `#debconf-team`) on `irc.oftc.net`
     * You don't have to be in Santa Fe (or Argentina)
-* Volunteer on site:
-    * Attend the conference
-    * Sign up for the volunteer system and take some tasks
 
 .qr: https://t.me/debian_argentina
