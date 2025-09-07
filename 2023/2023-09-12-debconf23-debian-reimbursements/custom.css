@@ -1,0 +1,39 @@
+a {
+	color: #1a6193;
+}
+
+code {
+	color: #2d2f56;
+}
+
+.title_slide h1 {
+	font-size: 7rem;
+}
+
+.title_slide .qr {
+	float: right;
+	position: absolute;
+	right: 0;
+}
+
+.full_image img {
+	height: 120%;
+}
+
+.full_image .inner section {
+	top: 0;
+}
+
+.full_email .inner section {
+	top: 0;
+}
+
+.long_email pre {
+	font-size: 50%;
+	max-height: none;
+}
+
+.medium_email pre {
+	font-size: 75%;
+	max-height: none;
+}
