@@ -1,0 +1,28 @@
+a {
+	color: #1a6193;
+}
+
+code {
+	color: #2d2f56;
+}
+
+.title_slide header {
+	text-align: center;
+}
+
+.title_slide h1 {
+	font-size: 8rem;
+}
+
+/* Double-height title */
+.title_slide section {
+	top: 350px;
+}
+
+.full_image img {
+	height: 120%;
+}
+
+.full_image .inner section {
+	top: 0;
+}
