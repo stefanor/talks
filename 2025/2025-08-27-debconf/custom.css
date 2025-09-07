@@ -1,0 +1,127 @@
+a {
+	color: #1a6193;
+}
+
+code {
+	color: #2d2f56;
+}
+
+.title_slide header {
+	text-align: center;
+}
+
+.title_slide h1 {
+	font-size: 8rem;
+}
+
+.title_slide img {
+	position: absolute;
+	float: right;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+
+/* Double-height title */
+.title_slide section {
+	top: 350px;
+}
+
+.full_image img {
+	height: 120%;
+}
+
+.full_image .inner section {
+	top: 0;
+}
+
+.bg-img {
+	background-size: cover;
+}
+
+.bg-img h1, .bg-img h2 {
+	filter: drop-shadow(2px 2px white);
+	backdrop-filter: blur(1px) brightness(75%);
+}
+
+.bg-img section {
+	color: white;
+	backdrop-filter: blur(1px) brightness(75%);
+	filter: drop-shadow(2px 2px black);
+}
+
+.bg-trixie {
+	background-image: url(images/ceratopsian.svg);
+}
+
+.bg-community {
+	background-image: url(images/aigarius-wedding-IMG_1561.jpg);
+}
+
+.bg-debconf1 {
+	background-image: url(images/debconf1.jpg);
+}
+
+.bg-standup {
+	background-image: url(images/aigarius-IMG_1258.JPG);
+}
+
+.bg-dc17-roche {
+	background-image: url(images/dc17-roche.jpg);
+}
+
+.bg-dc18-hacklab {
+	background-image: url(images/IMG_4412-small.JPG);
+}
+
+.bg-dc25-cpu {
+	background-image: url(images/stefanor-2025-07-09_15.09.15.jpg);
+}
+
+.bg-dc23-talk {
+	background-image: url(images/IMG_2876.JPG);
+}
+
+.bg-budget {
+	background-image: url(images/budget.jpg);
+}
+
+.bg-women {
+	background-image: url(images/aigarius-IMG_2806.JPG);
+}
+
+.bg-dc25-eating {
+	background-image: url(images/dc25-eating.jpg);
+}
+
+.bg-dc25-fd {
+	background-image: url(images/dc25-fd.jpg);
+}
+
+.bg-dc18-skymizer {
+	background-image: url(images/IMG_4449.JPG);
+}
+
+.bg-dc25-centre-vie {
+	background-image: url(images/aigarius-IMG_1241.JPG);
+}
+
+.bg-dc24-teams {
+	background-image: url(images/dc24-teams.jpg);
+}
+
+.bg-dc25-dorm {
+	background-image: url(images/room-with-integrated-shower.jpg);
+}
+
+.bg-dc24-switches {
+	background-image: url(images/stefanor-4-debcamp-2024-07-20_14.43.18.jpg);
+}
+
+.bg-dc25-daytrip {
+	background-image: url(images/aigarius-IMG_1618.JPG);
+}
+
+.bg-dc25-opening {
+	background-image: url(images/aigarius-IMG_1647.JPG);
+}
